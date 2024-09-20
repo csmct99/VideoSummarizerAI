@@ -18,6 +18,7 @@ A simple AI powered youtube video summerization tool that is meant to run from C
 
 # Usage
 Ensure your Open AI API key is in an env variable called: ``OPENAI_API_KEY``
+
 ``export OPENAI_API_KEY=""`` in your shell profile.
 
 ``python3 main.py [youtube video url]``
