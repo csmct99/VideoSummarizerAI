@@ -201,7 +201,7 @@ def main():
     parser.add_argument('video_url', type=str, help='YouTube video URL')
     parser.add_argument('--use-youtube-transcript', action='store_true', help='Use YouTube transcript instead of generating one')
     parser.add_argument('--cache-directory', type=str, default='./cache', help='Directory to store cached files')
-    parser.add_argument('--model', type=str, default='gpt-4', help='LLM model to use for summarization')
+    parser.add_argument('--model', type=str, default='gpt-4o-2024-08-06', help='LLM model to use for summarization')
     parser.add_argument('--llm-endpoint', type=str, default='', help='URL of the LLM endpoint')
     parser.add_argument('--prompt-file', type=str, default='prompt.txt', help='Path to system prompt file')
     args = parser.parse_args()

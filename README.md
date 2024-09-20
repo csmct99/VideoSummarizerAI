@@ -1,20 +1,40 @@
 # Video Summarizer AI
-A simple AI powered youtube video summerization tool. 
+A simple AI powered youtube video summerization tool that is meant to run from CLI.
 
 # TODO
-- [ ] Remove hardcoded youtube video in the script
+- [X] ~~Remove hardcoded youtube video in the script~~
 - [ ] Make the tool compatible with arbitrary LLM endpoints so it can be run using a local LLM instance.
-- [ ] Add the option to use youtube transcripts instead of generating transcripts from scratch.
-- [ ] Make script compatabile with CLI arguments
-- [ ] Move the video and transcript to their own folders and add those folders to the ignore
+- [X] ~~Add the option to use youtube transcripts instead of generating transcripts from scratch.~~
+- [X] ~~Make script compatabile with CLI arguments~~
+- [X] ~~Move the video and transcript to their own folders and add those folders to the ignore~~
 - [ ] Ensure the format of the summarizer is consistent via the sysprompt
+- [ ] Improve modularity to ensure running from CLI is easier
+- [ ] Better error handling for large videos
 
 # Installation
 Pip requirements have been piped to requirements.txt
 
 1. ``git clone https://github.com/csmct99/VideoSummarizerAI``
 2. ``pip install -r requirements.txt``
-3. ``python main.py``
+
+# Usage
+``python3 main.py [youtube video url]``
+
+# CLI Arguments & Flags
+``--use-youtube-transcript``
+enable this flag to use the youtube transcript instead of generating a new one via whisper.
+
+``--cache-directory [directory path]``
+specify the directory to store cached files
+
+``--model [model name]`` 
+The model to use for summarization. Default is gpt-4o
+
+``--llm-endpoint [url]``
+The URL of the LLM endpoint. Default is empty. Still very WIP. Testing on prod here.
+
+``--prompt-file [file path]``
+The path to the system prompt file. Default is prompt.txt, which is included in the repo.
 
 # Example Output
 
